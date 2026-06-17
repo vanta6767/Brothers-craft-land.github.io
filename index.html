@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brothers Craft Land</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050805;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#000000aa;
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+
+
+.logo{
+    color:#39ff14;
+    font-size:28px;
+    text-shadow:0 0 15px #39ff14;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+
+/* Hero */
+
+.hero{
+
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(#0009,#000),
+    url("minecraft-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:bgmove 15s infinite alternate;
+}
+
+
+@keyframes bgmove{
+
+from{
+background-position:center;
+}
+
+to{
+background-position:top;
+}
+
+}
+
+
+.hero h1{
+
+font-size:60px;
+animation:fade 2s;
+
+}
+
+
+.hero span{
+
+color:#39ff14;
+text-shadow:
+0 0 10px #39ff14,
+0 0 30px #39ff14;
+
+}
+
+
+.hero p{
+
+font-size:22px;
+margin:20px;
+animation:fade 2.5s;
+
+}
+
+
+.btn{
+
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+
+background:#39ff14;
+color:black;
+
+border-radius:30px;
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 30px #39ff14;
+
+}
+
+
+
+/* Sections */
+
+
+section{
+
+padding:90px 10%;
+text-align:center;
+
+}
+
+
+.title{
+
+font-size:40px;
+color:#39ff14;
+
+}
+
+
+
+/* Cards */
+
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+
+}
+
+
+.card{
+
+background:#101510;
+
+padding:30px;
+
+width:280px;
+
+border-radius:20px;
+
+border:1px solid #39ff14;
+
+transition:.5s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-15px) rotate(2deg);
+
+box-shadow:
+0 0 30px #39ff14;
+
+}
+
+
+
+.card h2{
+
+color:#39ff14;
+
+}
+
+
+
+
+/* Floating particles */
+
+
+.particle{
+
+position:absolute;
+
+width:10px;
+height:10px;
+
+background:#39ff14;
+
+border-radius:50%;
+
+animation:float 8s infinite;
+
+}
+
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+
+
+/* Animation */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+footer{
+
+padding:30px;
+background:#000;
+text-align:center;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2 class="logo">
+BCL
+</h2>
+
+
+<div>
+
+<a href="#server">Server</a>
+
+<a href="#about">About</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+<div class="hero">
+
+
+<div>
+
+
+<h1>
+Welcome to <span>Brothers Craft Land</span>
+</h1>
+
+
+<p>
+Survive • Build • Fight • Explore
+</p>
+
+
+<a class="btn" href="#server">
+Join Now
+</a>
+
+
+<a class="btn" href="https://discord.gg/ThAtuwUrd">
+Discord
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<section id="server">
+
+
+<h1 class="title">
+Server Info
+</h1>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>🌍 IP</h2>
+
+<p>
+play.brotherscraftland.xyz
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🎮 Modes</h2>
+
+<p>
+Survival<br>
+SMP<br>
+PvP<br>
+Events
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>👑 Founder</h2>
+
+<p>
+Kazi Safin
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="about">
+
+
+<h1 class="title">
+About BCL
+</h1>
+
+
+<p>
+Brothers Craft Land is a Minecraft community
+where players can build, survive and create
+amazing adventures together.
+</p>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+© 2026 Brothers Craft Land
+
+</footer>
+
+
+
+</body>
+  </html>
