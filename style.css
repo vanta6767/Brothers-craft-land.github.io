@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050805;
+    color:white;
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    z-index:100;
+}
+
+.logo{
+    color:#39ff14;
+    font-size:30px;
+    text-shadow:0 0 15px #39ff14;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#39ff14;
+}
+
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(#0009,#000),
+    url("minecraft-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:bgMove 15s infinite alternate;
+}
+
+
+@keyframes bgMove{
+    from{
+        background-position:center;
+    }
+
+    to{
+        background-position:top;
+    }
+}
+
+
+.hero h1{
+    font-size:60px;
+    animation:fadeUp 1.5s;
+}
+
+.hero span{
+    color:#39ff14;
+    text-shadow:0 0 20px #39ff14;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px;
+}
+
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    margin:10px;
+
+    background:#39ff14;
+    color:black;
+
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #39ff14;
+}
+
+
+
+section{
+    padding:90px 10%;
+    text-align:center;
+}
+
+
+.title{
+    color:#39ff14;
+    font-size:40px;
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+
+.card{
+
+    background:#101510;
+    padding:30px;
+
+    width:280px;
+
+    border-radius:20px;
+
+    border:1px solid #39ff14;
+
+    transition:.5s;
+
+    opacity:0;
+    transform:translateY(50px);
+}
+
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+.card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0 0 30px #39ff14;
+}
+
+
+.card h2{
+    color:#39ff14;
+}
+
+
+footer{
+
+    padding:30px;
+    text-align:center;
+    background:#000;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+to{
+    opacity:1;
+}
+
+  }
